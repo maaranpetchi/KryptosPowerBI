@@ -5,13 +5,25 @@
     ViewData["Title"] = "Log in";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
+<style>
+    body {
+        background-color: aliceblue;
+    }
+
+
+
+    img.logoLogin {
+        width: 186px;
+        height: 56px;
+        padding-left: 105px;
+    }
+</style>
 
 <div class="row justify-content-center">
     <div class="col-10">
         <section>
             <form id="account" method="post">
-                <h2>Welcome back!</h2>
-                <hr />
+                <img class="logoLogin" src="~/kryptos logo.png">                <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />

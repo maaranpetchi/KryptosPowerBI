@@ -35,5 +35,29 @@ namespace AuthSystem.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        public IActionResult BankingAnalyticsReport()
+        {
+            // Set the URL you want to display in the iframe
+            ViewBag.Url = "https://app.powerbi.com/view?r=eyJrIjoiYmI3M2QyZTktYWYxMC00MGUwLWJmZDYtNDI4ZmFiNTM5NmFjIiwidCI6IjE3ZDAxMGY0LTE0ZTItNGRiYy04MDU2LTc3MWE1MjllYWRmZCJ9\"";
+            return View("Iframe");
+        }
+   
+
+        public IActionResult DigitalInsuranceReport()
+        {
+            // Set the URL you want to display in the iframe
+            ViewBag.Url = "https://www.example.com/report";
+            return View("Iframe");
+        }
+
+        public IActionResult Dashboard()
+        {
+            // Set the URL you want to display in the iframe
+            ViewBag.Url = "https://www.example.com/dashboard";
+            return View("Iframe");
+        }
+
     }
 }
